@@ -55,7 +55,7 @@ void draw(float(*f)(float),float a,float b){
 	float y2[n*100];
 	for(j=0;j<n*100;j++){
 		x[j]=k;
-		k = k+((b-a)/(n-1));
+		k = k+((b-a)/(n*100)-1);
 		y1[j]=f(x[j]);
 		y2[j]=InterpLagrange(X,x[j],f);
 		fprintf(fp,"%f %f\n",x[j],y1[j]); 
